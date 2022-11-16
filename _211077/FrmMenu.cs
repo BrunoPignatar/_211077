@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _211077.Views;
 
 namespace _211077
 {
@@ -20,6 +21,12 @@ namespace _211077
         private void FrmMenu_Load(object sender, EventArgs e)
         {
             Banco.CriarBanco();
+        }
+
+        private void cidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCidades form = new FrmCidades();
+            form.Show();
         }
     }
 }

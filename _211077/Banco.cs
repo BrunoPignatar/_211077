@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace _211077
 {
@@ -85,6 +86,27 @@ namespace _211077
                     "nome char(40), " +
                     "uf char(02))", Conexao);
 
+                Comando.ExecuteNonQuery();
+
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXIST Marcas " +
+                    "(id integer auto_increment primary key," +
+                    "marca char(20))", Conexao);
+                Comando.ExecuteNonQuery();
+
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXIST Categorias " +
+                    "(id integer auto_increment primary key," +
+                    "categoria char(20))", Conexao);
+                Comando.ExecuteNonQuery();
+
+                Comando = new MySqlCommand("CREATE TABLE IF NOT EXISTS Clientes " +
+                    "(id integer auto_increment primary key, " +
+                    "nome char(40), " +
+                    "idCidade intenger," +
+                    "dataNasc date," +
+                    "renda decimal(10,2)," +
+                    "cpf char(14)," +
+                    "foto varchar(100), " +
+                    "venda boolean)", Conexao);
                 Comando.ExecuteNonQuery();
 
                 FecharConexao();

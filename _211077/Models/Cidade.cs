@@ -40,6 +40,27 @@ namespace _211077.Models
             }
         }
 
+        public void Alterar()
+
+        {
+            try
+            {
+                Banco.AbrirConexao();
+                Banco.Comando = new MySqlCommand("Update cidades set nome = @nome,uf = @uf where id = @id", Banco.Conexao);
+                Banco.Comando.Parameters.AddWithValue("@nome", nome);
+                Banco.Comando.Parameters.AddWithValue("@id", id);
+                Banco.Comando.ExecuteNonQuery();
+                Banco.FecharConexao();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+
         public void Excluir()
 
         {

@@ -145,6 +145,9 @@
     <EmbeddedResource Include="Views\FrmCidades.resx">
       <DependentUpon>FrmCidades.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
