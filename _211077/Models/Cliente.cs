@@ -69,7 +69,7 @@ namespace _211077.Models
                 Banco.Comando.Parameters.AddWithValue("@cpf", cpf);
                 Banco.Comando.Parameters.AddWithValue("@foto", foto);
                 Banco.Comando.Parameters.AddWithValue("@venda", venda);
-                Banco.Comando.Parameters.AddWithValue("@id", id);
+                Banco.Comando.Parameters.AddWithValue("@id", Id);
                 Banco.Comando.ExecuteNonQuery();
                 Banco.Conexao.Close();
 
@@ -87,7 +87,7 @@ namespace _211077.Models
                   {
                     Banco.Conexao.Open();
                     Banco.Comando = new MySqlCommand("delete from clientes whre id = @id", Banco.Conexao);
-                    Banco.Comando.Parameters.AddWithValue("@id", id);
+                    Banco.Comando.Parameters.AddWithValue("@id", Id);
                     Banco.Comando.ExecuteNonQuery();
                     Banco.Conexao.Close();
                   }

@@ -28,15 +28,13 @@ namespace _211077.Views
         }
 
         void carregarGrid(string pesquisa)
-        { 
-        c = new Cidade();
-            { 
-               
-                nome = pesquisa    
-                
+        {
+            c = new Cidade()
+            {
+                nome = pesquisa
             };
             dgvCidades.DataSource = c.Consultar();
-        
+
         }
 
         private void FrmCidades_Load(object sender, EventArgs e)

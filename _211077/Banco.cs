@@ -70,7 +70,7 @@ namespace _211077
             }
         }
 
-        public static void CriarBanco()
+        public static void Criarbanco()
 
         {
             try

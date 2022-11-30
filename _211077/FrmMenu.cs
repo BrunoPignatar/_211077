@@ -28,5 +28,10 @@ namespace _211077
             FrmCidades form = new FrmCidades();
             form.Show();
         }
+
+        private void cadastrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
